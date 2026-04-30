@@ -1,0 +1,72 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header & Nav */
+header {
+    background-color: #002f5b;
+    color: white;
+    padding: 15px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Hero Section */
+#hero {
+    text-align: center;
+    padding: 60px;
+    background-color: #0077b6;
+    color: white;
+}
+
+/* Search Section */
+#search {
+    text-align: center;
+    padding: 30px;
+}
+
+/* Jobs Section */
+#jobs {
+    padding: 20px;
+}
+
+article {
+    background: white;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+/* CTA */
+#cta {
+    text-align: center;
+    background-color: #023e8a;
+    color: white;
+    padding: 40px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #001d3d;
+    color: white;
+}
