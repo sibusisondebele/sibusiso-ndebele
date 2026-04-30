@@ -1,43 +1,84 @@
- <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background: #222;
-            color: white;
-            padding: 15px;
-            text-align: center;
-        }
-        nav {
-            background: #444;
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-        }
-        section {
-            padding: 20px;
-        }
-        footer {
-            background: #222;
-            color: white;
-            text-align: bottom;
-            padding: 100px;
-        }
-        form input, form textarea {
-            width: 100%;
-            margin: 10px 0;
-            padding: 8px;
-        }
-        button {
-            background: #222;
-            color: white;
-            padding: 10px 15px;
-            border: none;
-        }
-    </style>
+ body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #002f5b;
+    padding: 15px;
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 60px;
+    background-color: #0077b6;
+    color: white;
+}
+
+.btn {
+    background-color: #00b4d8;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Search Section */
+.search-section {
+    text-align: center;
+    padding: 30px;
+}
+
+.search-section input {
+    padding: 10px;
+    width: 250px;
+}
+
+.search-section button {
+    padding: 10px;
+}
+
+/* Jobs */
+.jobs {
+    padding: 20px;
+}
+
+.job-card {
+    background: white;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+/* CTA */
+.cta {
+    text-align: center;
+    background-color: #023e8a;
+    color: white;
+    padding: 40px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #001d3d;
+    color: white;
+}
