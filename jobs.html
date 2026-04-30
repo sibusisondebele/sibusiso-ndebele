@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobs - Botswana Talent Bridge</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <h1>Botswana Talent Bridge</h1>
+
+        <button class="menu-toggle">☰</button>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="jobs.html" class="active">Jobs</a></li>
+            <li><a href="candidates.html">CVs & Candidates</a></li>
+            <li><a href="post-job.html">Post a Job</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <!-- Page Hero -->
+    <section id="hero">
+        <h2>Available Job Opportunities</h2>
+        <p>Browse and search for jobs across Botswana</p>
+    </section>
+
+    <!-- Filters -->
+    <section id="search">
+        <input type="text" id="searchInput" placeholder="Search by title or location">
+
+        <select id="locationFilter">
+            <option value="">All Locations</option>
+            <option value="Gaborone">Gaborone</option>
+            <option value="Francistown">Francistown</option>
+            <option value="Maun">Maun</option>
+            <option value="Palapye">Palapye</option>
+        </select>
+
+        <button onclick="filterJobs()">Search</button>
+    </section>
+
+    <!-- Job Results -->
+    <section id="jobs">
+        <h3>Job Listings</h3>
+        <div id="job-list"></div>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 Botswana Talent Bridge</p>
+</footer>
+
+<!-- JS -->
+<script>
+    const jobs = [
+        { title: "Software Developer", company: "Tech Botswana", location: "Gaborone", type: "Full-time" },
+        { title: "Marketing Assistant", company: "Creative Agency BW", location: "Francistown", type: "Part-time" },
+        { title: "Accountant", company: "Finance Corp", location: "Maun", type: "Full-time" },
+        { title: "IT Support Technician", company: "Smart Solutions", location: "Gaborone", type: "Contract" },
+        { title: "Sales Representative", company: "Retail Hub", location: "Palapye", type: "Full-time" }
+    ];
+
+    function displayJobs(jobArray) {
+        const jobList = document.getElementById("job-list");
+        jobList.innerHTML = "";
+
+        if (jobArray.length === 0) {
+            jobList.innerHTML = "<p>No jobs found.</p>";
+            return;
+        }
+
+        jobArray.forEach(job => {
+            const jobCard = document.createElement("div");
+            jobCard.classList.add("job-card");
+
+            jobCard.innerHTML = `
+                <h4>${job.title}</h4>
+                <p><strong>Company:</strong> ${job.company}</p>
+                <p><strong>Location:</strong> ${job.location}</p>
+                <p><strong>Type:</strong> ${job.type}</p>
+                <button onclick="viewJob('${job.title}')">View Details</button>
+            `;
+
+            jobList.appendChild(jobCard);
+        });
+    }
+
+    function filterJobs() {
+        const searchValue = document.getElementById("searchInput").value.toLowerCase();
+        const locationValue = document.getElementById("locationFilter").value;
+
+        const filtered = jobs.filter(job =>
+            (job.title.toLowerCase().includes(searchValue) ||
+             job.location.toLowerCase().includes(searchValue)) &&
+            (locationValue === "" || job.location === locationValue)
+        );
+
+        displayJobs(filtered);
+    }
+
+    function viewJob(title) {
+        alert("Viewing details for: " + title);
+    }
+
+    window.onload = () => displayJobs(jobs);
+
+</script>
+
+</body>
+</html>

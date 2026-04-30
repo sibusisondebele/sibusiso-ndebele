@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post a Job - Botswana Talent Bridge</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <h1>Botswana Talent Bridge</h1>
+
+        <button class="menu-toggle">☰</button>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="post-job.html" class="active">Post a Job</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+<section id="hero">
+    <h2>Post a Job</h2>
+    <p>Reach talented candidates across Botswana</p>
+</section>
+
+<section class="form-section">
+    <form id="jobForm">
+        <input type="text" id="title" placeholder="Job Title" required>
+        <input type="text" id="company" placeholder="Company Name" required>
+        <input type="text" id="location" placeholder="Location" required>
+
+        <select id="type">
+            <option>Full-time</option>
+            <option>Part-time</option>
+            <option>Contract</option>
+        </select>
+
+        <textarea id="description" placeholder="Job Description" rows="5"></textarea>
+
+        <button type="submit">Post Job</button>
+    </form>
+</section>
+
+<section id="jobs">
+    <h3>Posted Jobs (Preview)</h3>
+    <div id="job-list"></div>
+</section>
+
+</main>
+
+<footer>
+    <p>© 2026 Botswana Talent Bridge</p>
+</footer>
+
+<script>
+    const jobList = document.getElementById("job-list");
+    const form = document.getElementById("jobForm");
+
+    form.addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        const job = {
+            title: document.getElementById("title").value,
+            company: document.getElementById("company").value,
+            location: document.getElementById("location").value,
+            type: document.getElementById("type").value,
+            description: document.getElementById("description").value
+        };
+
+        const card = document.createElement("div");
+        card.classList.add("job-card");
+
+        card.innerHTML = `
+            <h4>${job.title}</h4>
+            <p><strong>${job.company}</strong></p>
+            <p>${job.location} | ${job.type}</p>
+            <p>${job.description}</p>
+        `;
+
+        jobList.appendChild(card);
+
+        form.reset();
+    });
+
+</script>
+
+</body>
+</html>
