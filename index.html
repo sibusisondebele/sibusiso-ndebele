@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botswana Talent Bridge</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <h2>Botswana Talent Bridge</h2>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="candidates.html">Candidates</a></li>
+                <li><a href="post-job.html">Post Job</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <button id="menu-btn">☰</button>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Connecting Talent to Opportunity</h1>
+        <p>Find jobs across Botswana</p>
+
+        <input type="text" id="searchInput" placeholder="Search jobs...">
+        <button onclick="searchJobs()">Search</button>
+    </section>
+
+    <section class="stats">
+        <div class="card">
+            <h2 id="jobs-count">0</h2>
+            <p>Available Jobs</p>
+        </div>
+
+        <div class="card">
+            <h2 id="companies-count">0</h2>
+            <p>Companies</p>
+        </div>
+
+        <div class="card">
+            <h2 id="candidates-count">0</h2>
+            <p>Candidates</p>
+        </div>
+    </section>
+
+    <section class="featured-jobs">
+        <h2>Featured Jobs</h2>
+
+        <div id="job-container"></div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
