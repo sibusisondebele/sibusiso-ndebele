@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post a Job</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <h2>Botswana Talent Bridge</h2>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="candidates.html">Candidates</a></li>
+            <li><a href="post-job.html">Post Job</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="post-job">
+
+    <h1>Post a Job</h1>
+
+    <form id="jobForm">
+
+        <input type="text" placeholder="Job Title" required>
+
+        <input type="text" placeholder="Company Name" required>
+
+        <input type="text" placeholder="Location" required>
+
+        <select required>
+            <option value="">Select Sector</option>
+            <option>IT</option>
+            <option>Finance</option>
+            <option>Marketing</option>
+        </select>
+
+        <textarea placeholder="Job Description"></textarea>
+
+        <button type="submit">Post Job</button>
+
+    </form>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>

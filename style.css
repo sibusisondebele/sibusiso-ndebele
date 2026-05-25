@@ -1,0 +1,165 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+}
+
+body{
+    background:#f4f4f4;
+}
+
+.navbar{
+    background:#003366;
+    color:white;
+    padding:15px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:20px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+}
+
+.hero{
+    padding:80px 20px;
+    text-align:center;
+    background:white;
+}
+
+.hero input{
+    padding:10px;
+    width:300px;
+    margin-top:20px;
+}
+
+.hero button{
+    padding:10px 20px;
+}
+
+.stats{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    padding:40px;
+    flex-wrap:wrap;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    width:200px;
+    text-align:center;
+    border-radius:10px;
+}
+
+.featured-jobs{
+    padding:40px;
+}
+
+.job-card{
+    background:white;
+    padding:20px;
+    margin-top:20px;
+    border-radius:10px;
+}
+
+button{
+    background:#003366;
+    color:white;
+    border:none;
+    padding:10px 15px;
+    cursor:pointer;
+}
+
+.jobs-page{
+    display:flex;
+    padding:30px;
+    gap:30px;
+}
+
+.filters{
+    width:250px;
+    background:white;
+    padding:20px;
+}
+
+.jobs-list{
+    flex:1;
+}
+
+.candidate-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    padding:20px;
+}
+
+.candidate-card,
+.team-card{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+}
+
+.post-job,
+.about,
+.contact-page{
+    padding:40px;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+input,
+textarea,
+select{
+    padding:12px;
+}
+
+.contact-page{
+    display:flex;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.contact-form,
+.contact-info{
+    background:white;
+    padding:20px;
+    flex:1;
+}
+
+@media(max-width:768px){
+
+    .nav-links{
+        display:none;
+        flex-direction:column;
+        background:#003366;
+        position:absolute;
+        top:60px;
+        right:0;
+        width:200px;
+        padding:20px;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .jobs-page{
+        flex-direction:column;
+    }
+
+}
