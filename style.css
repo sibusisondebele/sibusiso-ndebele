@@ -386,3 +386,117 @@ textarea{
     }
 
 }
+/* DARK MODE */
+
+.dark-mode{
+    background:#121212;
+    color:white;
+}
+
+/* NAVBAR */
+
+.dark-mode .navbar{
+    background:linear-gradient(90deg,#000000,#222222);
+}
+
+/* HERO */
+
+.dark-mode .hero{
+    background:
+    linear-gradient(rgba(0,0,0,0.7),
+    rgba(0,0,0,0.7)),
+
+    url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1600&auto=format&fit=crop');
+
+    background-size:cover;
+    background-position:center;
+}
+
+/* CARDS */
+
+.dark-mode .card,
+.dark-mode .job-card,
+.dark-mode .candidate-card,
+.dark-mode .team-card,
+.dark-mode .filters,
+.dark-mode .contact-form,
+.dark-mode .contact-info,
+.dark-mode .upload-box{
+    background:#1e1e1e;
+    color:white;
+}
+
+/* INPUTS */
+
+.dark-mode input,
+.dark-mode textarea,
+.dark-mode select{
+    background:#2b2b2b;
+    color:white;
+    border:1px solid #555;
+}
+
+/* FOOTER */
+
+.dark-mode footer{
+    background:black;
+}
+
+/* JOBS SECTION */
+
+.dark-mode .featured-jobs{
+    background:#181818;
+}
+
+/* ABOUT */
+
+.dark-mode .about{
+    background:#181818;
+}
+
+/* CONTACT */
+
+.dark-mode .contact-page{
+    background:#181818;
+}
+
+/* CANDIDATES */
+
+.dark-mode .candidates{
+    background:#181818;
+}
+
+/* POST JOB */
+
+.dark-mode .post-job{
+    background:#181818;
+}
+
+/* TEXT */
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode p,
+.dark-mode label{
+    color:white;
+}
+
+/* BUTTON */
+
+.dark-mode .btn-warning{
+    background:#00c6ff;
+    border:none;
+}
+
+/* SMOOTH TRANSITION */
+
+body,
+.navbar,
+.card,
+input,
+textarea,
+select,
+section{
+    transition:0.4s ease;
+}
